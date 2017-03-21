@@ -17,8 +17,8 @@
                )
 end
 
-n = 902
-while n <= 1001
+n = 100
+while n <= 101
   Blog.create(
     title: "あああ",
     user_id: n
