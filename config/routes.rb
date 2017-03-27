@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
+
   resources :contacts, only: [:new, :create] do
    collection do
     post :confirm
