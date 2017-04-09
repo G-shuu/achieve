@@ -38,3 +38,20 @@ input[type="submit"].btn-block{
   opacity: 0.7;
  }
 }
+
+.btn {
+  display: none;
+}
+
+.content {
+  text-align: left;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+}
+
+.content img {
+  max-height: 50px;
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 30px;
+}

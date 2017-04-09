@@ -46,6 +46,8 @@ group :development, :test do
 
   gem 'pry-rails'
   gem 'better_errors'
+
+  gem 'dotenv-rails'
 end
 
 gem 'twitter-bootstrap-rails'
@@ -65,3 +67,13 @@ gem 'cancan'
 gem 'activeresource'
 
 gem 'her'
+
+# SNS Login
+gem 'omniauth-oauth2', '~> 1.3.1'
+gem 'faraday', '< 0.10'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+
+# profile image
+gem 'carrierwave'
+gem 'rmagick'
