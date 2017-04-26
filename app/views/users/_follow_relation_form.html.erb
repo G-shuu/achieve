@@ -1,0 +1,11 @@
+<% @user.followers.each do |user| %>
+  <%= user.name %>
+  <%= profile_img(user) %>
+  <%= user.email %>
+  <%= link_to users_path(user) do %>
+    <p>followers:<%= user.followers.count %></p>
+  <% end %>
+  <%= link_to users_path(user) do %>
+    <p>followed:<%= user.followed_users.count %></p>
+  <% end %>
+<% end %>
