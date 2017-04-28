@@ -6,7 +6,7 @@
         <%= profile_img(user) %>
         <%= user.name %>
       <% end %>
-      <%= user.email %>
+      <div class="email"><%= user.email %></div>
       <%= render 'follow_form', user: user %>
     </div>
   <% end %>

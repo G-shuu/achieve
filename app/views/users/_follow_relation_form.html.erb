@@ -1,11 +1,14 @@
-<% @user.followers.each do |user| %>
-  <%= user.name %>
-  <%= profile_img(user) %>
-  <%= user.email %>
-  <%= link_to users_path(user) do %>
-    <p>followers:<%= user.followers.count %></p>
+<div class="follow">
+  <div class="follower"><%= user.name %>のフォロワー</div>
+  <% @user.followers.each do |user| %>
+    <%= profile_img(user) %>
+    <%= user.name %></br>
   <% end %>
-  <%= link_to users_path(user) do %>
-    <p>followed:<%= user.followed_users.count %></p>
+</br>
+  <div class="followed"><%= user.name %>のフォローしている人</div>
+  <% @user.followed_users.each do |user| %>
+    <%= profile_img(user) %>
+    <%= user.name %></br>
   <% end %>
-<% end %>
+</div>
+<%= link_to "一覧へ戻る", users_path %>

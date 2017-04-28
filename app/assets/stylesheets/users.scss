@@ -1,6 +1,33 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.follower, .followed {
+  display: block;
+  padding-bottom: 20px;
+}
+
 img {
   width: 48px;
+}
+
+.image {
+  display: inline;
+}
+
+.container{
+  padding-bottom: 40px;
+}
+
+.container-child col-md-2 col-sm-4 col-xs-6 {
+  padding: auto;
+  border: auto;
+  margin: auto;
+}
+
+.email {
+  float: right;
+}
+
+.btn {
+  text-align: center;
 }

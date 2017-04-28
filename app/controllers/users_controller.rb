@@ -6,5 +6,6 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @followers = @user.followers
+    @folowed = @user.followed_users
   end
 end
