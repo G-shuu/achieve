@@ -73,4 +73,16 @@ class User < ActiveRecord::Base
   def unfollow!(other_user)
     relationships.find_by(followed_id: other_user.id).destroy
   end
+
+#  def comment_function(comment)
+#    Pusher.trigger("user_#{@comment.blog.user_id}_channel", 'comment_created', {
+#      message: 'あなたの作成したブログにコメントが付きました'
+#    })
+#  end
+
+#  def comment_notification
+#  Pusher.trigger("user_#{@comment.blog.user_id}_channel", notification_created, {
+#    unread_counts: Notification.where(user_id: @comment.blog.user_id, read: false).count
+#  })
+#  end
 end

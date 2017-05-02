@@ -77,3 +77,6 @@ gem 'omniauth-facebook'
 # profile image
 gem 'carrierwave'
 gem 'rmagick'
+
+# Pusher
+gem 'pusher'
