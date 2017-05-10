@@ -74,11 +74,11 @@ class User < ActiveRecord::Base
     relationships.find_by(followed_id: other_user.id).destroy
   end
 
-#  def comment_function(comment)
-#    Pusher.trigger("user_#{@comment.blog.user_id}_channel", 'comment_created', {
-#      message: 'あなたの作成したブログにコメントが付きました'
-#    })
-#  end
+  def comment_function
+    Pusher.trigger("user_#{@comment.blog.user_id}_channel", 'comment_created', {
+      message: 'あなたの作成したブログにコメントが付きました'
+    })
+  end
 
 #  def comment_notification
 #  Pusher.trigger("user_#{@comment.blog.user_id}_channel", notification_created, {

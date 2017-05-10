@@ -9,14 +9,10 @@ class CommentsController < ApplicationController
         format.html { redirect_to blog_path(@blog), notice: 'コメントを投稿しました。' }
         format.js { render :index }
 
-        unless @comment.blog.user_id == current_user.id
-          Pusher.trigger("user_#{@comment.blog.user_id}_channel", 'comment_created', {
-            message: 'あなたの作成したブログにコメントが付きました'
-          })
-        end
-          Pusher.trigger("user_#{@comment.blog.user_id}_channel", 'notification_created', {
-            unread_counts: Notification.where(user_id: @comment.blog.user.id, read: false).count
-          })
+      unless @comment.blog.user_id == current_user.id
+        comment_function
+      end
+
       else
         format.html { render :new }
       end
@@ -41,7 +37,7 @@ class CommentsController < ApplicationController
     params.require(:comment).permit(:blog_id, :content)
   end
 
-#  def comment_pop
+#  def comment_popup
 #      Pusher.trigger("user_#{@comment.blog.user_id}_channel", 'comment_created', {
 #        message: 'あなたの作成したブログにコメントが付きました'
 #      })
