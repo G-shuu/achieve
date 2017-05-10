@@ -12,6 +12,7 @@ class CommentsController < ApplicationController
       unless @comment.blog.user_id == current_user.id
         comment_function
       end
+        comment_notification
 
       else
         format.html { render :new }
