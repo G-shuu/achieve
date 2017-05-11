@@ -4,6 +4,6 @@ module NotificationsHelper
   end
 
   def more_than
-    @notifications_count >= 1
+    if @notifications_count >= "1"
   end
 end
