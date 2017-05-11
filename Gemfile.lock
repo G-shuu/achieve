@@ -115,6 +115,9 @@ GEM
     kaminari (0.17.0)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    kaminari-bootstrap (3.0.1)
+      kaminari (>= 0.13.0)
+      rails
     launchy (2.4.3)
       addressable (~> 2.3)
     less (2.6.0)
@@ -298,6 +301,8 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
+  kaminari
+  kaminari-bootstrap (~> 3.0.1)
   letter_opener_web
   omniauth-facebook
   omniauth-oauth2 (~> 1.3.1)

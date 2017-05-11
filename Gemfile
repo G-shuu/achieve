@@ -80,3 +80,7 @@ gem 'rmagick'
 
 # Pusher
 gem 'pusher'
+
+# page 
+gem 'kaminari'
+gem 'kaminari-bootstrap', '~> 3.0.1'
