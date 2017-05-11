@@ -57,3 +57,7 @@ module ActionView
     end
       image_tag(img_url, alt: user.name)
   end
+
+  def more_than
+    if @notifications_count >= 1
+  end
