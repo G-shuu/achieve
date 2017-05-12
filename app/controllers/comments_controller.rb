@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  include CommentsHelper
+
   def create
     @comment = current_user.comments.build(comment_params)
     @blog = @comment.blog
