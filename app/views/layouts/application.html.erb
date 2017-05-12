@@ -44,12 +44,14 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
         <%= link_to notifications_index_path, class: "navbar-brand" do %>
           <% if @notifications_count == 0 %>
             <i class="fa fa-bell fa-1x"><span id="unread_count"><%= @notifications_count %></span></i>
           <% else %>
             <i class="fa fa-bell fa-1x" style="color: yellow;"><span id="read_count"><%= @notifications_count %></span></i>
           <% end %>
+        <% end %>
         <% end %>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
