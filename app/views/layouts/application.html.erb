@@ -45,10 +45,10 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <%= link_to notifications_index_path, class: "navbar-brand" do %>
-          <% unless @notifications_count == 0 %>
-            <i class="fa fa-bell fa-1x" style="color: yellow;"><span id="read_count"><%= @notifications_count %></span></i>
-          <% else %>
+          <% if @notifications_count == 0 %>
             <i class="fa fa-bell fa-1x"><span id="unread_count"><%= @notifications_count %></span></i>
+          <% else %>
+            <i class="fa fa-bell fa-1x" style="color: yellow;"><span id="read_count"><%= @notifications_count %></span></i>
           <% end %>
         <% end %>
         <li class="dropdown">
