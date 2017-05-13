@@ -31,6 +31,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+# Capistrano
+gem 'therubyracer', platforms: :ruby
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -48,6 +50,13 @@ group :development, :test do
   gem 'better_errors'
 
   gem 'dotenv-rails'
+
+# Capistrano
+  gem 'capistrano', '3.6.0'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-unicorn'
 end
 
 gem 'twitter-bootstrap-rails'
@@ -85,4 +94,7 @@ gem 'pusher'
 gem 'kaminari'
 gem 'kaminari-bootstrap', '~> 3.0.1'
 
+# AWS image uploader
 gem 'fog'
+
+gem 'unicorn'
