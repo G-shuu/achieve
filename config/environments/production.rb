@@ -78,7 +78,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Sendgrid settings
-  config.action_mailer.default_url_options = { host: 'limitless-reaches-96978.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'http://54.65.134.28' }
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings =
   {
