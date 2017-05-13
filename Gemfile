@@ -49,8 +49,6 @@ group :development, :test do
   gem 'pry-rails'
   gem 'better_errors'
 
-  gem 'dotenv-rails'
-
 # Capistrano
   gem 'capistrano', '3.6.0'
   gem 'capistrano-bundler'
@@ -98,3 +96,4 @@ gem 'kaminari-bootstrap', '~> 3.0.1'
 gem 'fog'
 
 gem 'unicorn'
+gem 'dotenv-rails'
