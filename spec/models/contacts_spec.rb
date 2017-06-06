@@ -7,7 +7,7 @@ describe Contact do
     expect(contact).to be_valid
   end
 
-  # お問い合わせ要素(name, email, content)があれば有効な状態であること
+  # お問い合わせ要素(name, email, content)がなければ無効な状態であること
   it "is invalid without elements for contact" do
     contact = Contact.new
     expect(contact).not_to be_valid
