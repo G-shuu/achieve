@@ -27,6 +27,11 @@ module Achieve
 
 
     config.generators do |g|
+      g.assets     false
+      g.helper     false
+    end
+
+    config.generators do |g|
       g.test_framework :rspec,
         fixtures: true,
         view_specs: false,
