@@ -24,5 +24,10 @@ module Achieve
     config.active_record.raise_in_transactional_callbacks = true
 
     config.action_view.field_error_proc = proc { |html_tag, _| html_tag }
+
+    config.generators do |g|
+      g.assets     false
+      g.helper     false
+    end
   end
 end
