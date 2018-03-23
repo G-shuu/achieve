@@ -67,42 +67,24 @@ group :development, :test do
 end
 
 gem 'twitter-bootstrap-rails'
-
 gem 'jquery-turbolinks'
-
 gem 'rails_12factor', group: :production
-
 gem 'devise'
-
 gem 'faker'
-
 gem 'rails_admin'
-
 gem 'cancan'
-
 gem 'activeresource'
-
 gem 'her'
-
-# SNS Login
 gem 'omniauth-oauth2', '~> 1.3.1'
 gem 'faraday', '< 0.10'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
-
-# profile image
 gem 'carrierwave'
 gem 'rmagick'
-
-# Pusher
 gem 'pusher'
-
-# page
 gem 'kaminari'
 gem 'kaminari-bootstrap', '~> 3.0.1'
-
-# AWS image uploader
 gem 'fog'
-
 gem 'unicorn'
 gem 'dotenv-rails'
+gem 'gretel'
